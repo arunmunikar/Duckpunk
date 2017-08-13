@@ -1,0 +1,204 @@
+* {
+ box-sizing: border-box;
+}
+@font-face {
+    font-family: EkNidra;
+    src: url('cfonts/Fragmentcore.otf');
+}
+@font-face {
+    font-family: PailoFont;
+    src: url('cfonts/lucidaregular.ttf');
+}
+@font-face {
+    font-family: DosroFont;
+    src: url('cfonts/freestyle.TTF');
+}
+@font-face {
+    font-family: TesroFont;
+    src: url('cfonts/freescript.TTF');
+}
+body{
+outline:0;margin:0;background:#d3c2b0;font-family:EkNidra;
+}
+
+.col-1 {width: 8.33%;}.col-2 {width: 16.66%;}.col-3 {width: 25%;}.col-4 {width: 33.33%;}.col-5 {width: 41.66%;}.col-6 {width: 50%;}.col-7 {width: 58.33%;}.col-8{width: 66.66%;}.col-9 {width: 75%;}.col-10 {width: 83.33%;}.col-11 {width: 91.66%;}.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 0px solid red;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media only screen and (max-width: 768px) {/* For mobile phones: */ [class*="col-"] {width: 100%;}
+div#footer{padding:20px;font-size:0.5em;}
+div.row{margin-bottom:80px;}
+}
+@media only screen and (max-width: 320px) {
+    /* For mobile phones: 
+    [class*="col-"] {
+        width: 100%;
+    }*/
+div#footer{
+/*padding:20px;
+font-size:0.5em;
+position:relative;bottom:inherit;*/
+}
+}
+@media only screen and (max-width: 768px) {
+/*    ul.menu{top:4em;right:3em;}*/
+div.nilahbox, div.batta{width:100% !important  ;}
+}
+@media only screen and (min-width: 768px) {
+  /*  ul.menu{right:7em;}*/
+}
+@media only screen and (max-width: 688px) {
+    div.storyrow{padding-bottom:50px;}
+/*ul.menu li {line-height:1.4em !important;}*/
+}
+@media only screen and (max-width: 488px) {
+    div.storyrow{margin-bottom:30px !important;}
+div.row{margin-bottom:30px !important;}
+/*ul.menu li {line-height:1.1em !important;}*/
+}
+@media only screen and (max-width: 480px) {
+    ul.icon li a img {width:24px;}
+    ul.icon li {margin-right:5px !important;width:25px !important;}
+    ul.menu li a {font-size:15px;}
+}
+@media only screen and (max-width: 400px) {
+    ul.menu{position:absolute;right:20px;top:3px;}
+    ul.menu li a {font-size:12px;}
+    ul.icon li a img {width:16px;}
+    ul.icon li {margin-right:5px !important;width:17px !important;}
+    ul.menu li a {font-size:15px;}
+    li.bigonly{display:none;}
+}
+div.row{margin-bottom:0px;}
+
+div#top{
+height:60px;
+background:#000;
+position:fixed;
+top:0px;
+padding:10px;
+width:100%;
+
+
+}
+div#logo{
+text-align:center;
+padding-top:5em;
+}
+div.row{
+padding:1.2em;
+text-align:justify;
+font-size:18px;
+line-height:1.2em;
+padding-bottom:75px;
+}
+div.allclear{
+clear:both;
+}
+div#footer{
+background:#000;
+/*margin-top:30px;*/
+text-align:center;
+color:#ff0000;
+padding:1.2em   ;
+position:absolute;
+bottom:0px;
+position:fixed;
+width:100%;
+font-weight:bold;
+font-size:1.1em;
+
+}
+ul.menu{
+float:right;
+
+}
+ul.menu li{
+font-family:EkNidra;
+/*background:#fff;*/
+border-radius:5px;
+float:left;
+line-height:1.7em;
+font-size:19px;
+/*margin-left:20px;*/
+list-style:none;
+font-weight:bold;
+
+}
+ul.menu li a{
+text-decoration:none;color:#fff;font-weight:bold;
+}
+div.social{
+float:left;
+}
+ul.icon{position:absolute;left:-10px;}
+ul.icon li{
+width:30px;
+float:left;
+list-style:none;margin-right:10px;
+}
+ul.icon img{
+width:30px;
+}
+div.menu{
+width:80%;
+margin:0 auto;
+border:0px solid #fff;
+
+}
+
+a{
+text-decoration:none;color:#000;
+}
+div.justify{
+text-align:justify;
+}
+.nilah{font-size:80px;color:#0000ff;padding:10px 0px;font-family:DosroFont;text-align:center;}
+.belownilah{color:#0000ff;font-size:18px;padding-top:20px;font-family:arial;font-weight:bold;text-align:center;margin-bottom:-40px;font-family:'EkNidra';background:#000;padding-bottom: 10px;}
+div.nilahrow{background:#000;}
+div.nilahtext{color:#fff;}
+div.nilahcontent{margin-top:60px;}
+div.nilahbox{position:fixed;width:45%;top:40px;}
+.batta{float:right;width:92%;}
+
+/****************************VIDEO**********************************************/
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+width:50%;
+border:0px solid #fff;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
